@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Gerenciador de Colaboradores
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um gerenciador de colaboradores de uma organização, desenvolvido em React. Ele permite cadastrar novos colaboradores e times, definir favoritos, e mudar a cor dos times.
 
-## Available Scripts
+## Estrutura do Projeto
 
-In the project directory, you can run:
+O projeto é composto pelos seguintes componentes:
 
-### `npm start`
+- `App`: Componente principal que gerencia o estado da aplicação.
+- `Banner`: Componente que exibe o banner principal da aplicação.
+- `Formulario`: Componente para cadastrar novos colaboradores e novos times.
+- `Rodape`: Componente que exibe o rodapé da aplicação.
+- `Time`: Componente que exibe as informações de um time e seus colaboradores.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalação
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para instalar e rodar o projeto localmente, siga os seguintes passos:
 
-### `npm test`
+1. Clone o repositório:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```sh
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
-### `npm run build`
+2. Navegue até o diretório do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```sh
+   cd nome-do-repositorio
+   
+3. Instale as dependências:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```sh
+   npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Inicie o servidor de desenvolvimento:
 
-### `npm run eject`
+ ``sh
+   npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Abra o navegador e acesse http://localhost:3000
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Funcionalidades
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Cadastro de Times
+No formulário, você pode cadastrar novos times fornecendo um nome e uma cor. Os times cadastrados serão exibidos na seção "Minha organização".
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Cadastro de Colaboradores
+Você pode cadastrar novos colaboradores associando-os a um time existente. Cada colaborador possui um nome, cargo, imagem e um indicador de favorito.
 
-## Learn More
+### Favoritar Colaboradores
+Você pode marcar colaboradores como favoritos clicando na estrela ao lado de cada colaborador.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Deletar Colaboradores
+Você pode deletar colaboradores clicando no ícone de lixeira ao lado de cada colaborador.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Mudar Cor dos Times
+Você pode mudar a cor dos times utilizando o seletor de cores na seção de cada time.
 
-### Code Splitting
+## Estrutura do Código
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `App.js`
+O componente principal `App` gerencia o estado dos times e colaboradores. Ele contém funções para:
 
-### Analyzing the Bundle Size
+- Deletar colaboradores (`deletarColaborador`)
+- Mudar a cor dos times (`mudarCor`)
+- Cadastrar novos times (`cadastrarTime`)
+- Resolver o estado de favorito dos colaboradores (`resolverFavorito`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `Banner.js`
+Componente que exibe o banner principal da aplicação.
 
-### Making a Progressive Web App
+### `Formulario.js`
+Componente que exibe o formulário para cadastrar novos colaboradores e novos times. Recebe as funções `aoCriarTime` e `aoCadastrar` como props.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `Rodape.js`
+Componente que exibe o rodapé da aplicação.
 
-### Advanced Configuration
+### `Time.js`
+Componente que exibe as informações de um time e seus colaboradores. Recebe as funções `mudarCor`, `aoDeletar` e `aoFavoritar` como props.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Dependências
 
-### Deployment
+- `react`: Biblioteca principal para construir a interface do usuário.
+- `react-dom`: Pacote para manipulação do DOM com React.
+- `uuid`: Biblioteca para geração de IDs únicos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licença
 
-### `npm run build` fails to minify
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
