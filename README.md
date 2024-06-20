@@ -33,8 +33,8 @@ Para instalar e rodar o projeto localmente, siga os seguintes passos:
 
 4. Inicie o servidor de desenvolvimento:
 
- ``sh
-   npm start
+    ```sh
+    npm start
 
 5. Abra o navegador e acesse http://localhost:3000
 
@@ -82,8 +82,4 @@ Componente que exibe as informações de um time e seus colaboradores. Recebe as
 - `react`: Biblioteca principal para construir a interface do usuário.
 - `react-dom`: Pacote para manipulação do DOM com React.
 - `uuid`: Biblioteca para geração de IDs únicos.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
